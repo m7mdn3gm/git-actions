@@ -10,8 +10,10 @@ jobs:
 
 
     steps:
-      - name: "testing github actions"
-        run: pwd
+      - name: "before listing files"
+        run: ls
 
-      - name: "printing a word"
-        run: echo start
+      - uses: actions/checkout@v3
+
+      - name: "After listing files"
+        run: ls -a
